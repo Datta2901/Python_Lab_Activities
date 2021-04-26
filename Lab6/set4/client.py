@@ -1,4 +1,3 @@
-# question number 7
 import time
 import socket
 # import sys

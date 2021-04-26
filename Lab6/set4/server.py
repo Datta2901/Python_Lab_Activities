@@ -9,19 +9,19 @@ def startchat(num,port):
     s=socket.socket()
     host=socket.gethostname()
     ip=socket.gethostbyname(host)
-    #port = 1234
+    # port = 1234
     s.bind((host,int(port)))
     print(host,"(",ip,")\n")
     name=input(str("Enter your name: "))
     
     s.listen(1)
-    print("\nWaiting for incoming connections...\n")
+    print("\nWaiting for incoming connections\n")
     conn,addr=s.accept()
     print("Received connection from ", addr[0],"(",addr[1],")\n")
     
     sName = conn.recv(1024)
     sName = sName.decode()
-    print(sName,"has connected to the chatroom\nEnter 1 to exit the chatroon\n")
+    print(sName,"has connected to the chat\nEnter 1 to exit the chat\n")
     conn.send(name.encode())
     
     while True:
@@ -40,9 +40,8 @@ def startchat(num,port):
         
         
 try:
-    noOfChats = int(input("Enter the number of chats that you want to receive: "))
-    for i in range(noOfChats):
-        # print(1234+i)
+    size = int(input("Enter the number of chats that you want to receive: "))
+    for i in range(size):
         _thread.start_new_thread(startchat,(i+1,1234+i))
 except:
     print("Error during threading")
