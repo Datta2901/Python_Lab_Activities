@@ -1,0 +1,11 @@
+{
+    "jupyter.exportWithOutputEnabled": true,
+    "python.pythonPath": "E:\\Programming Files\\python.exe",
+    "notebook.lineNumbers": "on",
+    "notebook.cellToolbarLocation":{
+        "1": "hidden",
+        "default": "right"
+    },
+    "notebook.outline.showCodeCells": true
+
+}

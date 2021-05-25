@@ -1,7 +1,6 @@
 
 import socket
 
-
 def server_program():
     host = socket.gethostname()
     port = 5000  
@@ -14,8 +13,6 @@ def server_program():
     while True: 
         conn.send("Meassge from server".encode())
         break;  
-    conn.close()  
+    conn.close() 
 
-
-if __name__ == '__main__':
-    server_program()
+server_program()
